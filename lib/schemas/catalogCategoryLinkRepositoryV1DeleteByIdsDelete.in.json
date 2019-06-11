@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "categoryId": {
+            "required": true,
+            "type": "string"
+        },
+        "sku": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

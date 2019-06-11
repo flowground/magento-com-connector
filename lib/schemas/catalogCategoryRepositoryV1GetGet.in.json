@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "categoryId": {
+            "required": true,
+            "type": "integer"
+        },
+        "storeId": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

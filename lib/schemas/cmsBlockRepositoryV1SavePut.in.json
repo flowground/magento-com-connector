@@ -1,0 +1,54 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "block": {
+                    "description": "CMS block interface.",
+                    "properties": {
+                        "active": {
+                            "description": "Active",
+                            "type": "boolean"
+                        },
+                        "content": {
+                            "description": "Content",
+                            "type": "string"
+                        },
+                        "creation_time": {
+                            "description": "Creation time",
+                            "type": "string"
+                        },
+                        "id": {
+                            "description": "ID",
+                            "type": "integer"
+                        },
+                        "identifier": {
+                            "description": "Identifier",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Title",
+                            "type": "string"
+                        },
+                        "update_time": {
+                            "description": "Update time",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "identifier"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "block"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "confirmationKey": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "confirmationKey"
+            ],
+            "type": "object"
+        }
+    }
+}

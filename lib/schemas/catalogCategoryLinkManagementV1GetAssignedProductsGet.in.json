@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "categoryId": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

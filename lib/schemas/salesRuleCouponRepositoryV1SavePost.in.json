@@ -1,0 +1,68 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "coupon": {
+                    "description": "Interface CouponInterface",
+                    "properties": {
+                        "code": {
+                            "description": "Coupon code",
+                            "type": "string"
+                        },
+                        "coupon_id": {
+                            "description": "Coupon id",
+                            "type": "integer"
+                        },
+                        "created_at": {
+                            "description": "When the coupon is created",
+                            "type": "string"
+                        },
+                        "expiration_date": {
+                            "description": "Expiration date",
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\SalesRule\\Api\\Data\\CouponInterface",
+                            "type": "object"
+                        },
+                        "is_primary": {
+                            "description": "The coupon is primary coupon for the rule that it's associated with",
+                            "type": "boolean"
+                        },
+                        "rule_id": {
+                            "description": "The id of the rule associated with the coupon",
+                            "type": "integer"
+                        },
+                        "times_used": {
+                            "description": "The number of times the coupon has been used",
+                            "type": "integer"
+                        },
+                        "type": {
+                            "description": "Of coupon",
+                            "type": "integer"
+                        },
+                        "usage_limit": {
+                            "description": "Usage limit",
+                            "type": "integer"
+                        },
+                        "usage_per_customer": {
+                            "description": "Usage limit per customer",
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "rule_id",
+                        "times_used",
+                        "is_primary"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "coupon"
+            ],
+            "type": "object"
+        }
+    }
+}

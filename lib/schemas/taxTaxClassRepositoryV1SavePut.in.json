@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "classId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "taxClass": {
+                    "description": "Tax class interface.",
+                    "properties": {
+                        "class_id": {
+                            "description": "Tax class ID.",
+                            "type": "integer"
+                        },
+                        "class_name": {
+                            "description": "Tax class name.",
+                            "type": "string"
+                        },
+                        "class_type": {
+                            "description": "Tax class type.",
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Tax\\Api\\Data\\TaxClassInterface",
+                            "type": "object"
+                        }
+                    },
+                    "required": [
+                        "class_name",
+                        "class_type"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "taxClass"
+            ],
+            "type": "object"
+        }
+    }
+}

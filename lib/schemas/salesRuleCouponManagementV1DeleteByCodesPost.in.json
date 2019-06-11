@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "codes": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "ignoreInvalidCoupons": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "codes"
+            ],
+            "type": "object"
+        }
+    }
+}

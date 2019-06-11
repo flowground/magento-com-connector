@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "cartId": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

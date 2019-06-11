@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "childSku": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "countryId": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

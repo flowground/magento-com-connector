@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "productWebsiteLink": {
+                    "description": "",
+                    "properties": {
+                        "sku": {
+                            "type": "string"
+                        },
+                        "website_id": {
+                            "description": "Website ids",
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "sku",
+                        "website_id"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "productWebsiteLink"
+            ],
+            "type": "object"
+        }
+    }
+}

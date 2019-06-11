@@ -1,0 +1,274 @@
+{
+    "type": "object",
+    "properties": {
+        "attributeCode": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "attribute": {
+                    "description": "",
+                    "properties": {
+                        "apply_to": {
+                            "description": "Apply to value for the element",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "attribute_code": {
+                            "description": "Code of the attribute.",
+                            "type": "string"
+                        },
+                        "attribute_id": {
+                            "description": "Id of the attribute.",
+                            "type": "integer"
+                        },
+                        "backend_model": {
+                            "description": "Backend model",
+                            "type": "string"
+                        },
+                        "backend_type": {
+                            "description": "Backend type.",
+                            "type": "string"
+                        },
+                        "custom_attributes": {
+                            "description": "Custom attributes values.",
+                            "items": {
+                                "description": "Interface for custom attribute value.",
+                                "properties": {
+                                    "attribute_code": {
+                                        "description": "Attribute code",
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "description": "Attribute value",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "attribute_code",
+                                    "value"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "default_frontend_label": {
+                            "description": "Frontend label for default store",
+                            "type": "string"
+                        },
+                        "default_value": {
+                            "description": "Default value for the element.",
+                            "type": "string"
+                        },
+                        "entity_type_id": {
+                            "description": "Entity type id",
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Catalog\\Api\\Data\\EavAttributeInterface",
+                            "type": "object"
+                        },
+                        "frontend_class": {
+                            "description": "Frontend class of attribute",
+                            "type": "string"
+                        },
+                        "frontend_input": {
+                            "description": "HTML for input element.",
+                            "type": "string"
+                        },
+                        "frontend_labels": {
+                            "description": "Frontend label for each store",
+                            "items": {
+                                "description": "Interface AttributeFrontendLabelInterface",
+                                "properties": {
+                                    "label": {
+                                        "description": "Option label",
+                                        "type": "string"
+                                    },
+                                    "store_id": {
+                                        "description": "Store id",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "is_comparable": {
+                            "description": "The attribute can be compared on the frontend",
+                            "type": "string"
+                        },
+                        "is_filterable": {
+                            "description": "It used in layered navigation",
+                            "type": "boolean"
+                        },
+                        "is_filterable_in_grid": {
+                            "description": "It is filterable in catalog product grid",
+                            "type": "boolean"
+                        },
+                        "is_filterable_in_search": {
+                            "description": "It is used in search results layered navigation",
+                            "type": "boolean"
+                        },
+                        "is_html_allowed_on_front": {
+                            "description": "The HTML tags are allowed on the frontend",
+                            "type": "boolean"
+                        },
+                        "is_required": {
+                            "description": "Attribute is required.",
+                            "type": "boolean"
+                        },
+                        "is_searchable": {
+                            "description": "The attribute can be used in Quick Search",
+                            "type": "string"
+                        },
+                        "is_unique": {
+                            "description": "This is a unique attribute",
+                            "type": "string"
+                        },
+                        "is_used_for_promo_rules": {
+                            "description": "The attribute can be used for promo rules",
+                            "type": "string"
+                        },
+                        "is_used_in_grid": {
+                            "description": "It is used in catalog product grid",
+                            "type": "boolean"
+                        },
+                        "is_user_defined": {
+                            "description": "Current attribute has been defined by a user.",
+                            "type": "boolean"
+                        },
+                        "is_visible": {
+                            "description": "Attribute is visible on frontend.",
+                            "type": "boolean"
+                        },
+                        "is_visible_in_advanced_search": {
+                            "description": "The attribute can be used in Advanced Search",
+                            "type": "string"
+                        },
+                        "is_visible_in_grid": {
+                            "description": "It is visible in catalog product grid",
+                            "type": "boolean"
+                        },
+                        "is_visible_on_front": {
+                            "description": "The attribute is visible on the frontend",
+                            "type": "string"
+                        },
+                        "is_wysiwyg_enabled": {
+                            "description": "WYSIWYG flag",
+                            "type": "boolean"
+                        },
+                        "note": {
+                            "description": "The note attribute for the element.",
+                            "type": "string"
+                        },
+                        "options": {
+                            "description": "Options of the attribute (key => value pairs for select)",
+                            "items": {
+                                "description": "Created from:",
+                                "properties": {
+                                    "is_default": {
+                                        "description": "Default",
+                                        "type": "boolean"
+                                    },
+                                    "label": {
+                                        "description": "Option label",
+                                        "type": "string"
+                                    },
+                                    "sort_order": {
+                                        "description": "Option order",
+                                        "type": "integer"
+                                    },
+                                    "store_labels": {
+                                        "description": "Option label for store scopes",
+                                        "items": {
+                                            "description": "Interface AttributeOptionLabelInterface",
+                                            "properties": {
+                                                "label": {
+                                                    "description": "Option label",
+                                                    "type": "string"
+                                                },
+                                                "store_id": {
+                                                    "description": "Store id",
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "type": "array"
+                                    },
+                                    "value": {
+                                        "description": "Option value",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "label",
+                                    "value"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "position": {
+                            "description": "Position",
+                            "type": "integer"
+                        },
+                        "scope": {
+                            "description": "Attribute scope",
+                            "type": "string"
+                        },
+                        "source_model": {
+                            "description": "Source model",
+                            "type": "string"
+                        },
+                        "used_for_sort_by": {
+                            "description": "It is used for sorting in product listing",
+                            "type": "boolean"
+                        },
+                        "used_in_product_listing": {
+                            "description": "The attribute can be used in product listing",
+                            "type": "string"
+                        },
+                        "validation_rules": {
+                            "description": "Validation rules.",
+                            "items": {
+                                "description": "Interface AttributeValidationRuleInterface",
+                                "properties": {
+                                    "key": {
+                                        "description": "Object key",
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "description": "Object value",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "key",
+                                    "value"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "attribute_code",
+                        "frontend_input",
+                        "is_required",
+                        "frontend_labels"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "attribute"
+            ],
+            "type": "object"
+        }
+    }
+}

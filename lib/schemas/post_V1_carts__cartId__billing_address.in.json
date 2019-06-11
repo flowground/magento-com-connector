@@ -1,0 +1,161 @@
+{
+    "type": "object",
+    "properties": {
+        "cartId": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "address": {
+                    "description": "Interface AddressInterface",
+                    "properties": {
+                        "city": {
+                            "description": "City name",
+                            "type": "string"
+                        },
+                        "company": {
+                            "description": "Company",
+                            "type": "string"
+                        },
+                        "country_id": {
+                            "description": "Country id",
+                            "type": "string"
+                        },
+                        "custom_attributes": {
+                            "description": "Custom attributes values.",
+                            "items": {
+                                "description": "Interface for custom attribute value.",
+                                "properties": {
+                                    "attribute_code": {
+                                        "description": "Attribute code",
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "description": "Attribute value",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "attribute_code",
+                                    "value"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "customer_address_id": {
+                            "description": "Customer address id",
+                            "type": "integer"
+                        },
+                        "customer_id": {
+                            "description": "Customer id",
+                            "type": "integer"
+                        },
+                        "email": {
+                            "description": "Billing/shipping email",
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Quote\\Api\\Data\\AddressInterface",
+                            "properties": {
+                                "gift_registry_id": {
+                                    "type": "integer"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "fax": {
+                            "description": "Fax number",
+                            "type": "string"
+                        },
+                        "firstname": {
+                            "description": "First name",
+                            "type": "string"
+                        },
+                        "id": {
+                            "description": "Id",
+                            "type": "integer"
+                        },
+                        "lastname": {
+                            "description": "Last name",
+                            "type": "string"
+                        },
+                        "middlename": {
+                            "description": "Middle name",
+                            "type": "string"
+                        },
+                        "postcode": {
+                            "description": "Postcode",
+                            "type": "string"
+                        },
+                        "prefix": {
+                            "description": "Prefix",
+                            "type": "string"
+                        },
+                        "region": {
+                            "description": "Region name",
+                            "type": "string"
+                        },
+                        "region_code": {
+                            "description": "Region code",
+                            "type": "string"
+                        },
+                        "region_id": {
+                            "description": "Region id",
+                            "type": "integer"
+                        },
+                        "same_as_billing": {
+                            "description": "Same as billing flag",
+                            "type": "integer"
+                        },
+                        "save_in_address_book": {
+                            "description": "Save in address book flag",
+                            "type": "integer"
+                        },
+                        "street": {
+                            "description": "Street",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "suffix": {
+                            "description": "Suffix",
+                            "type": "string"
+                        },
+                        "telephone": {
+                            "description": "Telephone number",
+                            "type": "string"
+                        },
+                        "vat_id": {
+                            "description": "Vat id",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "region",
+                        "region_id",
+                        "region_code",
+                        "country_id",
+                        "street",
+                        "telephone",
+                        "postcode",
+                        "city",
+                        "firstname",
+                        "lastname",
+                        "email"
+                    ],
+                    "type": "object"
+                },
+                "useForShipping": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "address"
+            ],
+            "type": "object"
+        }
+    }
+}

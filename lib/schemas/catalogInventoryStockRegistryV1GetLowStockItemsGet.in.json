@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "scopeId": {
+            "required": true,
+            "type": "integer"
+        },
+        "qty": {
+            "required": true,
+            "type": "number"
+        },
+        "currentPage": {
+            "required": false,
+            "type": "integer"
+        },
+        "pageSize": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

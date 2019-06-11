@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+        "wrappingId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "data": {
+                    "description": "Interface WrappingInterface",
+                    "properties": {
+                        "base_currency_code": {
+                            "type": "string"
+                        },
+                        "base_price": {
+                            "type": "number"
+                        },
+                        "design": {
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\GiftWrapping\\Api\\Data\\WrappingInterface",
+                            "type": "object"
+                        },
+                        "image_base64_content": {
+                            "type": "string"
+                        },
+                        "image_name": {
+                            "type": "string"
+                        },
+                        "image_url": {
+                            "description": "Wrapping image URL.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "integer"
+                        },
+                        "website_ids": {
+                            "items": {
+                                "type": "integer"
+                            },
+                            "type": "array"
+                        },
+                        "wrapping_id": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "design",
+                        "status",
+                        "base_price"
+                    ],
+                    "type": "object"
+                },
+                "storeId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "data"
+            ],
+            "type": "object"
+        }
+    }
+}

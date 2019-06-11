@@ -1,0 +1,239 @@
+{
+    "type": "object",
+    "properties": {
+        "quoteId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "cartItem": {
+                    "description": "Interface CartItemInterface",
+                    "properties": {
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Quote\\Api\\Data\\CartItemInterface",
+                            "type": "object"
+                        },
+                        "item_id": {
+                            "description": "Item ID. Otherwise, null.",
+                            "type": "integer"
+                        },
+                        "name": {
+                            "description": "Product name. Otherwise, null.",
+                            "type": "string"
+                        },
+                        "price": {
+                            "description": "Product price. Otherwise, null.",
+                            "type": "number"
+                        },
+                        "product_option": {
+                            "description": "Product option interface",
+                            "properties": {
+                                "extension_attributes": {
+                                    "description": "ExtensionInterface class for @see \\Magento\\Quote\\Api\\Data\\ProductOptionInterface",
+                                    "properties": {
+                                        "bundle_options": {
+                                            "items": {
+                                                "description": "Interface BundleOptionInterface",
+                                                "properties": {
+                                                    "extension_attributes": {
+                                                        "description": "ExtensionInterface class for @see \\Magento\\Bundle\\Api\\Data\\BundleOptionInterface",
+                                                        "type": "object"
+                                                    },
+                                                    "option_id": {
+                                                        "description": "Bundle option id.",
+                                                        "type": "integer"
+                                                    },
+                                                    "option_qty": {
+                                                        "description": "Bundle option quantity.",
+                                                        "type": "integer"
+                                                    },
+                                                    "option_selections": {
+                                                        "description": "Bundle option selection ids.",
+                                                        "items": {
+                                                            "type": "integer"
+                                                        },
+                                                        "type": "array"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "option_id",
+                                                    "option_qty",
+                                                    "option_selections"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "configurable_item_options": {
+                                            "items": {
+                                                "description": "Interface ConfigurableItemOptionValueInterface",
+                                                "properties": {
+                                                    "extension_attributes": {
+                                                        "description": "ExtensionInterface class for @see \\Magento\\ConfigurableProduct\\Api\\Data\\ConfigurableItemOptionValueInterface",
+                                                        "type": "object"
+                                                    },
+                                                    "option_id": {
+                                                        "description": "Option SKU",
+                                                        "type": "string"
+                                                    },
+                                                    "option_value": {
+                                                        "description": "Item id",
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "option_id"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "custom_options": {
+                                            "items": {
+                                                "description": "Interface CustomOptionInterface",
+                                                "properties": {
+                                                    "extension_attributes": {
+                                                        "description": "ExtensionInterface class for @see \\Magento\\Catalog\\Api\\Data\\CustomOptionInterface",
+                                                        "properties": {
+                                                            "file_info": {
+                                                                "description": "Image Content data interface",
+                                                                "properties": {
+                                                                    "base64_encoded_data": {
+                                                                        "description": "Media data (base64 encoded content)",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "name": {
+                                                                        "description": "Image name",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "type": {
+                                                                        "description": "MIME type",
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "base64_encoded_data",
+                                                                    "type",
+                                                                    "name"
+                                                                ],
+                                                                "type": "object"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "option_id": {
+                                                        "description": "Option id",
+                                                        "type": "string"
+                                                    },
+                                                    "option_value": {
+                                                        "description": "Option value",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "option_id",
+                                                    "option_value"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "downloadable_option": {
+                                            "description": "Downloadable Option",
+                                            "properties": {
+                                                "downloadable_links": {
+                                                    "description": "The list of downloadable links",
+                                                    "items": {
+                                                        "type": "integer"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "required": [
+                                                "downloadable_links"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "giftcard_item_option": {
+                                            "description": "Interface GiftCardOptionInterface",
+                                            "properties": {
+                                                "custom_giftcard_amount": {
+                                                    "description": "Gift card open amount value.",
+                                                    "type": "number"
+                                                },
+                                                "extension_attributes": {
+                                                    "description": "ExtensionInterface class for @see \\Magento\\GiftCard\\Api\\Data\\GiftCardOptionInterface",
+                                                    "type": "object"
+                                                },
+                                                "giftcard_amount": {
+                                                    "description": "Gift card amount.",
+                                                    "type": "string"
+                                                },
+                                                "giftcard_message": {
+                                                    "description": "Giftcard message.",
+                                                    "type": "string"
+                                                },
+                                                "giftcard_recipient_email": {
+                                                    "description": "Gift card recipient email.",
+                                                    "type": "string"
+                                                },
+                                                "giftcard_recipient_name": {
+                                                    "description": "Gift card recipient name.",
+                                                    "type": "string"
+                                                },
+                                                "giftcard_sender_email": {
+                                                    "description": "Gift card sender email.",
+                                                    "type": "string"
+                                                },
+                                                "giftcard_sender_name": {
+                                                    "description": "Gift card sender name.",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "giftcard_amount",
+                                                "giftcard_sender_name",
+                                                "giftcard_recipient_name",
+                                                "giftcard_sender_email",
+                                                "giftcard_recipient_email"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "product_type": {
+                            "description": "Product type. Otherwise, null.",
+                            "type": "string"
+                        },
+                        "qty": {
+                            "description": "Product quantity.",
+                            "type": "number"
+                        },
+                        "quote_id": {
+                            "description": "Quote id.",
+                            "type": "string"
+                        },
+                        "sku": {
+                            "description": "Product SKU. Otherwise, null.",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "qty",
+                        "quote_id"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "cartItem"
+            ],
+            "type": "object"
+        }
+    }
+}

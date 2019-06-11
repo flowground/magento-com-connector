@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "searchCriteria_requestName_": {
+            "type": "string"
+        },
+        "searchCriteria_filterGroups____filters____field_": {
+            "type": "string"
+        },
+        "searchCriteria_filterGroups____filters____value_": {
+            "type": "string"
+        },
+        "searchCriteria_filterGroups____filters____conditionType_": {
+            "type": "string"
+        },
+        "searchCriteria_sortOrders____field_": {
+            "type": "string"
+        },
+        "searchCriteria_sortOrders____direction_": {
+            "type": "string"
+        },
+        "searchCriteria_pageSize_": {
+            "type": "integer"
+        },
+        "searchCriteria_currentPage_": {
+            "type": "integer"
+        }
+    }
+}

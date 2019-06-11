@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "redirectUrl": {
+                    "type": "string"
+                },
+                "websiteId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "email",
+                "websiteId"
+            ],
+            "type": "object"
+        }
+    }
+}

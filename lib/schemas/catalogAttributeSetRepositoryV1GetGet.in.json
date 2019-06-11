@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "attributeSetId": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

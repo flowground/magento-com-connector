@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "rootCategoryId": {
+            "required": false,
+            "type": "integer"
+        },
+        "depth": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

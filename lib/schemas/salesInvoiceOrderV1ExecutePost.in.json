@@ -1,0 +1,80 @@
+{
+    "type": "object",
+    "properties": {
+        "orderId": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "appendComment": {
+                    "type": "boolean"
+                },
+                "arguments": {
+                    "description": "Interface for creation arguments for Invoice.",
+                    "properties": {
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\InvoiceCreationArgumentsInterface",
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "capture": {
+                    "type": "boolean"
+                },
+                "comment": {
+                    "description": "Interface InvoiceCommentCreationInterface",
+                    "properties": {
+                        "comment": {
+                            "description": "Comment.",
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\InvoiceCommentCreationInterface",
+                            "type": "object"
+                        },
+                        "is_visible_on_front": {
+                            "description": "Is-visible-on-storefront flag value.",
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "comment",
+                        "is_visible_on_front"
+                    ],
+                    "type": "object"
+                },
+                "items": {
+                    "items": {
+                        "description": "Input argument for invoice creation Interface InvoiceItemCreationInterface",
+                        "properties": {
+                            "extension_attributes": {
+                                "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\InvoiceItemCreationInterface",
+                                "type": "object"
+                            },
+                            "order_item_id": {
+                                "description": "Order item ID.",
+                                "type": "integer"
+                            },
+                            "qty": {
+                                "description": "Quantity.",
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "order_item_id",
+                            "qty"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "notify": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "group": {
+                    "description": "Customer group interface.",
+                    "properties": {
+                        "code": {
+                            "description": "Code",
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Customer\\Api\\Data\\GroupInterface",
+                            "type": "object"
+                        },
+                        "id": {
+                            "description": "Id",
+                            "type": "integer"
+                        },
+                        "tax_class_id": {
+                            "description": "Tax class id",
+                            "type": "integer"
+                        },
+                        "tax_class_name": {
+                            "description": "Tax class name",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "code",
+                        "tax_class_id"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "group"
+            ],
+            "type": "object"
+        }
+    }
+}

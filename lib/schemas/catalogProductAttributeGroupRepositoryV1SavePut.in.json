@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "attributeSetId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "group": {
+                    "description": "Interface AttributeGroupInterface",
+                    "properties": {
+                        "attribute_group_id": {
+                            "description": "Id",
+                            "type": "string"
+                        },
+                        "attribute_group_name": {
+                            "description": "Name",
+                            "type": "string"
+                        },
+                        "attribute_set_id": {
+                            "description": "Attribute set id",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Eav\\Api\\Data\\AttributeGroupInterface",
+                            "properties": {
+                                "attribute_group_code": {
+                                    "type": "string"
+                                },
+                                "sort_order": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "required": [
+                "group"
+            ],
+            "type": "object"
+        }
+    }
+}

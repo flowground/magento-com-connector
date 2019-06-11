@@ -1,0 +1,285 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "rmaDataObject": {
+                    "description": "Interface RmaInterface",
+                    "properties": {
+                        "comments": {
+                            "description": "Comments list",
+                            "items": {
+                                "description": "Interface CommentInterface",
+                                "properties": {
+                                    "admin": {
+                                        "description": "Is_admin",
+                                        "type": "boolean"
+                                    },
+                                    "comment": {
+                                        "description": "Comment",
+                                        "type": "string"
+                                    },
+                                    "created_at": {
+                                        "description": "Created_at",
+                                        "type": "string"
+                                    },
+                                    "custom_attributes": {
+                                        "description": "Custom attributes values.",
+                                        "items": {
+                                            "description": "Interface for custom attribute value.",
+                                            "properties": {
+                                                "attribute_code": {
+                                                    "description": "Attribute code",
+                                                    "type": "string"
+                                                },
+                                                "value": {
+                                                    "description": "Attribute value",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "attribute_code",
+                                                "value"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "type": "array"
+                                    },
+                                    "customer_notified": {
+                                        "description": "Is_customer_notified",
+                                        "type": "boolean"
+                                    },
+                                    "entity_id": {
+                                        "description": "Entity_id",
+                                        "type": "integer"
+                                    },
+                                    "extension_attributes": {
+                                        "description": "ExtensionInterface class for @see \\Magento\\Rma\\Api\\Data\\CommentInterface",
+                                        "type": "object"
+                                    },
+                                    "rma_entity_id": {
+                                        "description": "Rma Id",
+                                        "type": "integer"
+                                    },
+                                    "status": {
+                                        "description": "Status",
+                                        "type": "string"
+                                    },
+                                    "visible_on_front": {
+                                        "description": "Is_visible_on_front",
+                                        "type": "boolean"
+                                    }
+                                },
+                                "required": [
+                                    "comment",
+                                    "rma_entity_id",
+                                    "created_at",
+                                    "entity_id",
+                                    "customer_notified",
+                                    "visible_on_front",
+                                    "status",
+                                    "admin"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "custom_attributes": {
+                            "description": "Custom attributes values.",
+                            "items": {
+                                "description": "Interface for custom attribute value.",
+                                "properties": {
+                                    "attribute_code": {
+                                        "description": "Attribute code",
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "description": "Attribute value",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "attribute_code",
+                                    "value"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "customer_custom_email": {
+                            "description": "Customer_custom_email",
+                            "type": "string"
+                        },
+                        "customer_id": {
+                            "description": "Customer_id",
+                            "type": "integer"
+                        },
+                        "date_requested": {
+                            "description": "Date_requested",
+                            "type": "string"
+                        },
+                        "entity_id": {
+                            "description": "Entity_id",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Rma\\Api\\Data\\RmaInterface",
+                            "type": "object"
+                        },
+                        "increment_id": {
+                            "description": "Entity_id",
+                            "type": "string"
+                        },
+                        "items": {
+                            "description": "Items",
+                            "items": {
+                                "description": "Interface CategoryInterface",
+                                "properties": {
+                                    "condition": {
+                                        "description": "Condition",
+                                        "type": "string"
+                                    },
+                                    "entity_id": {
+                                        "description": "Id",
+                                        "type": "integer"
+                                    },
+                                    "extension_attributes": {
+                                        "description": "ExtensionInterface class for @see \\Magento\\Rma\\Api\\Data\\ItemInterface",
+                                        "type": "object"
+                                    },
+                                    "order_item_id": {
+                                        "description": "Order_item_id",
+                                        "type": "integer"
+                                    },
+                                    "qty_approved": {
+                                        "description": "Qty_approved",
+                                        "type": "integer"
+                                    },
+                                    "qty_authorized": {
+                                        "description": "Qty_authorized",
+                                        "type": "integer"
+                                    },
+                                    "qty_requested": {
+                                        "description": "Qty_requested",
+                                        "type": "integer"
+                                    },
+                                    "qty_returned": {
+                                        "description": "Qty_returned",
+                                        "type": "integer"
+                                    },
+                                    "reason": {
+                                        "description": "Reason",
+                                        "type": "string"
+                                    },
+                                    "resolution": {
+                                        "description": "Resolution",
+                                        "type": "string"
+                                    },
+                                    "rma_entity_id": {
+                                        "description": "RMA id",
+                                        "type": "integer"
+                                    },
+                                    "status": {
+                                        "description": "Status",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "entity_id",
+                                    "rma_entity_id",
+                                    "order_item_id",
+                                    "qty_requested",
+                                    "qty_authorized",
+                                    "qty_approved",
+                                    "qty_returned",
+                                    "reason",
+                                    "condition",
+                                    "resolution",
+                                    "status"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "order_id": {
+                            "description": "Order_id",
+                            "type": "integer"
+                        },
+                        "order_increment_id": {
+                            "description": "Order_increment_id",
+                            "type": "string"
+                        },
+                        "status": {
+                            "description": "Status",
+                            "type": "string"
+                        },
+                        "store_id": {
+                            "description": "Store_id",
+                            "type": "integer"
+                        },
+                        "tracks": {
+                            "description": "Tracks list",
+                            "items": {
+                                "description": "Interface TrackInterface",
+                                "properties": {
+                                    "carrier_code": {
+                                        "description": "Carrier code",
+                                        "type": "string"
+                                    },
+                                    "carrier_title": {
+                                        "description": "Carrier title",
+                                        "type": "string"
+                                    },
+                                    "entity_id": {
+                                        "description": "Entity id",
+                                        "type": "integer"
+                                    },
+                                    "extension_attributes": {
+                                        "description": "ExtensionInterface class for @see \\Magento\\Rma\\Api\\Data\\TrackInterface",
+                                        "type": "object"
+                                    },
+                                    "rma_entity_id": {
+                                        "description": "Rma entity id",
+                                        "type": "integer"
+                                    },
+                                    "track_number": {
+                                        "description": "Track number",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "entity_id",
+                                    "rma_entity_id",
+                                    "track_number",
+                                    "carrier_title",
+                                    "carrier_code"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "increment_id",
+                        "entity_id",
+                        "order_id",
+                        "order_increment_id",
+                        "store_id",
+                        "customer_id",
+                        "date_requested",
+                        "customer_custom_email",
+                        "items",
+                        "status",
+                        "comments",
+                        "tracks"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "rmaDataObject"
+            ],
+            "type": "object"
+        }
+    }
+}

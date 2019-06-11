@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "attributeSet": {
+                    "description": "Interface AttributeSetInterface",
+                    "properties": {
+                        "attribute_set_id": {
+                            "description": "Attribute set ID",
+                            "type": "integer"
+                        },
+                        "attribute_set_name": {
+                            "description": "Attribute set name",
+                            "type": "string"
+                        },
+                        "entity_type_id": {
+                            "description": "Attribute set entity type id",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Eav\\Api\\Data\\AttributeSetInterface",
+                            "type": "object"
+                        },
+                        "sort_order": {
+                            "description": "Attribute set sort order index",
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "attribute_set_name",
+                        "sort_order"
+                    ],
+                    "type": "object"
+                },
+                "skeletonId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "attributeSet",
+                "skeletonId"
+            ],
+            "type": "object"
+        }
+    }
+}

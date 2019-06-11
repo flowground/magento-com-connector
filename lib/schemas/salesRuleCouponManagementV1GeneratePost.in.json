@@ -1,0 +1,61 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "couponSpec": {
+                    "description": "CouponGenerationSpecInterface",
+                    "properties": {
+                        "delimiter": {
+                            "description": "The delimiter",
+                            "type": "string"
+                        },
+                        "delimiter_at_every": {
+                            "description": "The spacing where the delimiter should exist",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\SalesRule\\Api\\Data\\CouponGenerationSpecInterface",
+                            "type": "object"
+                        },
+                        "format": {
+                            "description": "Format of generated coupon code",
+                            "type": "string"
+                        },
+                        "length": {
+                            "description": "Length of coupon code",
+                            "type": "integer"
+                        },
+                        "prefix": {
+                            "description": "The prefix",
+                            "type": "string"
+                        },
+                        "quantity": {
+                            "description": "Of coupons to generate",
+                            "type": "integer"
+                        },
+                        "rule_id": {
+                            "description": "The id of the rule associated with the coupon",
+                            "type": "integer"
+                        },
+                        "suffix": {
+                            "description": "The suffix",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "rule_id",
+                        "format",
+                        "quantity",
+                        "length"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "couponSpec"
+            ],
+            "type": "object"
+        }
+    }
+}

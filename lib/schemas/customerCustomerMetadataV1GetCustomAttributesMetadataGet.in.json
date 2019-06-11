@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "dataInterfaceName": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

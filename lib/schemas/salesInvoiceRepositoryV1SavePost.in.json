@@ -1,0 +1,377 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "entity": {
+                    "description": "Invoice interface. An invoice is a record of the receipt of payment for an order.",
+                    "properties": {
+                        "base_currency_code": {
+                            "description": "Base currency code.",
+                            "type": "string"
+                        },
+                        "base_discount_amount": {
+                            "description": "Base discount amount.",
+                            "type": "number"
+                        },
+                        "base_discount_tax_compensation_amount": {
+                            "description": "Base discount tax compensation amount.",
+                            "type": "number"
+                        },
+                        "base_grand_total": {
+                            "description": "Base grand total.",
+                            "type": "number"
+                        },
+                        "base_shipping_amount": {
+                            "description": "Base shipping amount.",
+                            "type": "number"
+                        },
+                        "base_shipping_discount_tax_compensation_amnt": {
+                            "description": "Base shipping discount tax compensation amount.",
+                            "type": "number"
+                        },
+                        "base_shipping_incl_tax": {
+                            "description": "Base shipping including tax.",
+                            "type": "number"
+                        },
+                        "base_shipping_tax_amount": {
+                            "description": "Base shipping tax amount.",
+                            "type": "number"
+                        },
+                        "base_subtotal": {
+                            "description": "Base subtotal.",
+                            "type": "number"
+                        },
+                        "base_subtotal_incl_tax": {
+                            "description": "Base subtotal including tax.",
+                            "type": "number"
+                        },
+                        "base_tax_amount": {
+                            "description": "Base tax amount.",
+                            "type": "number"
+                        },
+                        "base_to_global_rate": {
+                            "description": "Base-to-global rate.",
+                            "type": "number"
+                        },
+                        "base_to_order_rate": {
+                            "description": "Base-to-order rate.",
+                            "type": "number"
+                        },
+                        "base_total_refunded": {
+                            "description": "Base total refunded.",
+                            "type": "number"
+                        },
+                        "billing_address_id": {
+                            "description": "Billing address ID.",
+                            "type": "integer"
+                        },
+                        "can_void_flag": {
+                            "description": "Can void flag value.",
+                            "type": "integer"
+                        },
+                        "comments": {
+                            "description": "Array of any invoice comments. Otherwise, null.",
+                            "items": {
+                                "description": "Invoice comment interface. An invoice is a record of the receipt of payment for an order. An invoice can include comments that detail the invoice history.",
+                                "properties": {
+                                    "comment": {
+                                        "description": "Comment.",
+                                        "type": "string"
+                                    },
+                                    "created_at": {
+                                        "description": "Created-at timestamp.",
+                                        "type": "string"
+                                    },
+                                    "entity_id": {
+                                        "description": "Invoice ID.",
+                                        "type": "integer"
+                                    },
+                                    "extension_attributes": {
+                                        "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\InvoiceCommentInterface",
+                                        "type": "object"
+                                    },
+                                    "is_customer_notified": {
+                                        "description": "Is-customer-notified flag value.",
+                                        "type": "integer"
+                                    },
+                                    "is_visible_on_front": {
+                                        "description": "Is-visible-on-storefront flag value.",
+                                        "type": "integer"
+                                    },
+                                    "parent_id": {
+                                        "description": "Parent ID.",
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "is_customer_notified",
+                                    "parent_id",
+                                    "comment",
+                                    "is_visible_on_front"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "created_at": {
+                            "description": "Created-at timestamp.",
+                            "type": "string"
+                        },
+                        "discount_amount": {
+                            "description": "Discount amount.",
+                            "type": "number"
+                        },
+                        "discount_description": {
+                            "description": "Discount description.",
+                            "type": "string"
+                        },
+                        "discount_tax_compensation_amount": {
+                            "description": "Discount tax compensation amount.",
+                            "type": "number"
+                        },
+                        "email_sent": {
+                            "description": "Email-sent flag value.",
+                            "type": "integer"
+                        },
+                        "entity_id": {
+                            "description": "Invoice ID.",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\InvoiceInterface",
+                            "properties": {
+                                "base_customer_balance_amount": {
+                                    "type": "number"
+                                },
+                                "base_gift_cards_amount": {
+                                    "type": "number"
+                                },
+                                "customer_balance_amount": {
+                                    "type": "number"
+                                },
+                                "gift_cards_amount": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "global_currency_code": {
+                            "description": "Global currency code.",
+                            "type": "string"
+                        },
+                        "grand_total": {
+                            "description": "Grand total.",
+                            "type": "number"
+                        },
+                        "increment_id": {
+                            "description": "Increment ID.",
+                            "type": "string"
+                        },
+                        "is_used_for_refund": {
+                            "description": "Is-used-for-refund flag value.",
+                            "type": "integer"
+                        },
+                        "items": {
+                            "description": "Array of invoice items.",
+                            "items": {
+                                "description": "Invoice item interface. An invoice is a record of the receipt of payment for an order. An invoice item is a purchased item in an invoice.",
+                                "properties": {
+                                    "additional_data": {
+                                        "description": "Additional data.",
+                                        "type": "string"
+                                    },
+                                    "base_cost": {
+                                        "description": "Base cost.",
+                                        "type": "number"
+                                    },
+                                    "base_discount_amount": {
+                                        "description": "Base discount amount.",
+                                        "type": "number"
+                                    },
+                                    "base_discount_tax_compensation_amount": {
+                                        "description": "Base discount tax compensation amount.",
+                                        "type": "number"
+                                    },
+                                    "base_price": {
+                                        "description": "Base price.",
+                                        "type": "number"
+                                    },
+                                    "base_price_incl_tax": {
+                                        "description": "Base price including tax.",
+                                        "type": "number"
+                                    },
+                                    "base_row_total": {
+                                        "description": "Base row total.",
+                                        "type": "number"
+                                    },
+                                    "base_row_total_incl_tax": {
+                                        "description": "Base row total including tax.",
+                                        "type": "number"
+                                    },
+                                    "base_tax_amount": {
+                                        "description": "Base tax amount.",
+                                        "type": "number"
+                                    },
+                                    "description": {
+                                        "description": "Description.",
+                                        "type": "string"
+                                    },
+                                    "discount_amount": {
+                                        "description": "Discount amount.",
+                                        "type": "number"
+                                    },
+                                    "discount_tax_compensation_amount": {
+                                        "description": "Discount tax compensation amount.",
+                                        "type": "number"
+                                    },
+                                    "entity_id": {
+                                        "description": "Invoice item ID.",
+                                        "type": "integer"
+                                    },
+                                    "extension_attributes": {
+                                        "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\InvoiceItemInterface",
+                                        "type": "object"
+                                    },
+                                    "name": {
+                                        "description": "Name.",
+                                        "type": "string"
+                                    },
+                                    "order_item_id": {
+                                        "description": "Order item ID.",
+                                        "type": "integer"
+                                    },
+                                    "parent_id": {
+                                        "description": "Parent ID.",
+                                        "type": "integer"
+                                    },
+                                    "price": {
+                                        "description": "Price.",
+                                        "type": "number"
+                                    },
+                                    "price_incl_tax": {
+                                        "description": "Price including tax.",
+                                        "type": "number"
+                                    },
+                                    "product_id": {
+                                        "description": "Product ID.",
+                                        "type": "integer"
+                                    },
+                                    "qty": {
+                                        "description": "Quantity.",
+                                        "type": "number"
+                                    },
+                                    "row_total": {
+                                        "description": "Row total.",
+                                        "type": "number"
+                                    },
+                                    "row_total_incl_tax": {
+                                        "description": "Row total including tax.",
+                                        "type": "number"
+                                    },
+                                    "sku": {
+                                        "description": "SKU.",
+                                        "type": "string"
+                                    },
+                                    "tax_amount": {
+                                        "description": "Tax amount.",
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "sku",
+                                    "order_item_id",
+                                    "qty"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "order_currency_code": {
+                            "description": "Order currency code.",
+                            "type": "string"
+                        },
+                        "order_id": {
+                            "description": "Order ID.",
+                            "type": "integer"
+                        },
+                        "shipping_address_id": {
+                            "description": "Shipping address ID.",
+                            "type": "integer"
+                        },
+                        "shipping_amount": {
+                            "description": "Shipping amount.",
+                            "type": "number"
+                        },
+                        "shipping_discount_tax_compensation_amount": {
+                            "description": "Shipping discount tax compensation amount.",
+                            "type": "number"
+                        },
+                        "shipping_incl_tax": {
+                            "description": "Shipping including tax.",
+                            "type": "number"
+                        },
+                        "shipping_tax_amount": {
+                            "description": "Shipping tax amount.",
+                            "type": "number"
+                        },
+                        "state": {
+                            "description": "State.",
+                            "type": "integer"
+                        },
+                        "store_currency_code": {
+                            "description": "Store currency code.",
+                            "type": "string"
+                        },
+                        "store_id": {
+                            "description": "Store ID.",
+                            "type": "integer"
+                        },
+                        "store_to_base_rate": {
+                            "description": "Store-to-base rate.",
+                            "type": "number"
+                        },
+                        "store_to_order_rate": {
+                            "description": "Store-to-order rate.",
+                            "type": "number"
+                        },
+                        "subtotal": {
+                            "description": "Subtotal.",
+                            "type": "number"
+                        },
+                        "subtotal_incl_tax": {
+                            "description": "Subtotal including tax.",
+                            "type": "number"
+                        },
+                        "tax_amount": {
+                            "description": "Tax amount.",
+                            "type": "number"
+                        },
+                        "total_qty": {
+                            "description": "Total quantity.",
+                            "type": "number"
+                        },
+                        "transaction_id": {
+                            "description": "Transaction ID.",
+                            "type": "string"
+                        },
+                        "updated_at": {
+                            "description": "Updated-at timestamp.",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "order_id",
+                        "total_qty",
+                        "items"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "entity"
+            ],
+            "type": "object"
+        }
+    }
+}

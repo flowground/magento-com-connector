@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "entity": {
+                    "description": "Credit memo comment interface. After a customer places and pays for an order and an invoice has been issued, the merchant can create a credit memo to refund all or part of the amount paid for any returned or undelivered items. The memo restores funds to the customer account so that the customer can make future purchases. A credit memo usually includes comments that detail why the credit memo amount was credited to the customer.",
+                    "properties": {
+                        "comment": {
+                            "description": "Comment.",
+                            "type": "string"
+                        },
+                        "created_at": {
+                            "description": "Created-at timestamp.",
+                            "type": "string"
+                        },
+                        "entity_id": {
+                            "description": "Credit memo ID.",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\CreditmemoCommentInterface",
+                            "type": "object"
+                        },
+                        "is_customer_notified": {
+                            "description": "Is-customer-notified flag value.",
+                            "type": "integer"
+                        },
+                        "is_visible_on_front": {
+                            "description": "Is-visible-on-storefront flag value.",
+                            "type": "integer"
+                        },
+                        "parent_id": {
+                            "description": "Parent ID.",
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "comment",
+                        "is_customer_notified",
+                        "is_visible_on_front",
+                        "parent_id"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "entity"
+            ],
+            "type": "object"
+        }
+    }
+}

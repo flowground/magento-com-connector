@@ -1,0 +1,98 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "page": {
+                    "description": "CMS page interface.",
+                    "properties": {
+                        "active": {
+                            "description": "Active",
+                            "type": "boolean"
+                        },
+                        "content": {
+                            "description": "Content",
+                            "type": "string"
+                        },
+                        "content_heading": {
+                            "description": "Content heading",
+                            "type": "string"
+                        },
+                        "creation_time": {
+                            "description": "Creation time",
+                            "type": "string"
+                        },
+                        "custom_layout_update_xml": {
+                            "description": "Custom layout update xml",
+                            "type": "string"
+                        },
+                        "custom_root_template": {
+                            "description": "Custom root template",
+                            "type": "string"
+                        },
+                        "custom_theme": {
+                            "description": "Custom theme",
+                            "type": "string"
+                        },
+                        "custom_theme_from": {
+                            "description": "Custom theme from",
+                            "type": "string"
+                        },
+                        "custom_theme_to": {
+                            "description": "Custom theme to",
+                            "type": "string"
+                        },
+                        "id": {
+                            "description": "ID",
+                            "type": "integer"
+                        },
+                        "identifier": {
+                            "description": "Identifier",
+                            "type": "string"
+                        },
+                        "layout_update_xml": {
+                            "description": "Layout update xml",
+                            "type": "string"
+                        },
+                        "meta_description": {
+                            "description": "Meta description",
+                            "type": "string"
+                        },
+                        "meta_keywords": {
+                            "description": "Meta keywords",
+                            "type": "string"
+                        },
+                        "meta_title": {
+                            "description": "Meta title",
+                            "type": "string"
+                        },
+                        "page_layout": {
+                            "description": "Page layout",
+                            "type": "string"
+                        },
+                        "sort_order": {
+                            "description": "Sort order",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Title",
+                            "type": "string"
+                        },
+                        "update_time": {
+                            "description": "Update time",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "identifier"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "page"
+            ],
+            "type": "object"
+        }
+    }
+}

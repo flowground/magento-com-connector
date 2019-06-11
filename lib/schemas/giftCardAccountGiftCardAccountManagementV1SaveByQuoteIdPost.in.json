@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "giftCardAccountData": {
+                    "description": "Gift Card Account data",
+                    "properties": {
+                        "base_gift_cards_amount": {
+                            "description": "Cards amount in base currency",
+                            "type": "number"
+                        },
+                        "base_gift_cards_amount_used": {
+                            "description": "Cards amount used in base currency",
+                            "type": "number"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\GiftCardAccount\\Api\\Data\\GiftCardAccountInterface",
+                            "type": "object"
+                        },
+                        "gift_cards": {
+                            "description": "Cards codes",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "gift_cards_amount": {
+                            "description": "Cards amount in quote currency",
+                            "type": "number"
+                        },
+                        "gift_cards_amount_used": {
+                            "description": "Cards amount used in quote currency",
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "gift_cards",
+                        "gift_cards_amount",
+                        "base_gift_cards_amount",
+                        "gift_cards_amount_used",
+                        "base_gift_cards_amount_used"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "giftCardAccountData"
+            ],
+            "type": "object"
+        }
+    }
+}

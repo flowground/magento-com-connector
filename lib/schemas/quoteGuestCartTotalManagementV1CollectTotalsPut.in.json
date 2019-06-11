@@ -1,0 +1,150 @@
+{
+    "type": "object",
+    "properties": {
+        "cartId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "additionalData": {
+                    "description": "Additional data for totals collection.",
+                    "properties": {
+                        "custom_attributes": {
+                            "description": "Custom attributes values.",
+                            "items": {
+                                "description": "Interface for custom attribute value.",
+                                "properties": {
+                                    "attribute_code": {
+                                        "description": "Attribute code",
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "description": "Attribute value",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "attribute_code",
+                                    "value"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Quote\\Api\\Data\\TotalsAdditionalDataInterface",
+                            "properties": {
+                                "gift_messages": {
+                                    "items": {
+                                        "description": "Interface MessageInterface",
+                                        "properties": {
+                                            "customer_id": {
+                                                "description": "Customer ID. Otherwise, null.",
+                                                "type": "integer"
+                                            },
+                                            "extension_attributes": {
+                                                "description": "ExtensionInterface class for @see \\Magento\\GiftMessage\\Api\\Data\\MessageInterface",
+                                                "properties": {
+                                                    "entity_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "entity_type": {
+                                                        "type": "string"
+                                                    },
+                                                    "wrapping_add_printed_card": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "wrapping_allow_gift_receipt": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "wrapping_id": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "gift_message_id": {
+                                                "description": "Gift message ID. Otherwise, null.",
+                                                "type": "integer"
+                                            },
+                                            "message": {
+                                                "description": "Message text.",
+                                                "type": "string"
+                                            },
+                                            "recipient": {
+                                                "description": "Recipient name.",
+                                                "type": "string"
+                                            },
+                                            "sender": {
+                                                "description": "Sender name.",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "sender",
+                                            "recipient",
+                                            "message"
+                                        ],
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "paymentMethod": {
+                    "description": "Interface PaymentInterface",
+                    "properties": {
+                        "additional_data": {
+                            "description": "Payment additional details",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Quote\\Api\\Data\\PaymentInterface",
+                            "properties": {
+                                "agreement_ids": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "method": {
+                            "description": "Payment method code",
+                            "type": "string"
+                        },
+                        "po_number": {
+                            "description": "Purchase order number",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "method"
+                    ],
+                    "type": "object"
+                },
+                "shippingCarrierCode": {
+                    "description": "The carrier code.",
+                    "type": "string"
+                },
+                "shippingMethodCode": {
+                    "description": "The shipping method code.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "paymentMethod"
+            ],
+            "type": "object"
+        }
+    }
+}

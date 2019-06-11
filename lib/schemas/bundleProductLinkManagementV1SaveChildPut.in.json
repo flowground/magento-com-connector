@@ -1,0 +1,72 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "linkedProduct": {
+                    "description": "Interface LinkInterface",
+                    "properties": {
+                        "can_change_quantity": {
+                            "description": "Whether quantity could be changed",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Bundle\\Api\\Data\\LinkInterface",
+                            "type": "object"
+                        },
+                        "id": {
+                            "description": "The identifier",
+                            "type": "string"
+                        },
+                        "is_default": {
+                            "description": "Is default",
+                            "type": "boolean"
+                        },
+                        "option_id": {
+                            "description": "Option id",
+                            "type": "integer"
+                        },
+                        "position": {
+                            "description": "Position",
+                            "type": "integer"
+                        },
+                        "price": {
+                            "description": "Price",
+                            "type": "number"
+                        },
+                        "price_type": {
+                            "description": "Price type",
+                            "type": "integer"
+                        },
+                        "qty": {
+                            "description": "Qty",
+                            "type": "number"
+                        },
+                        "sku": {
+                            "description": "Linked product sku",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "is_default",
+                        "price",
+                        "price_type"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "linkedProduct"
+            ],
+            "type": "object"
+        }
+    }
+}

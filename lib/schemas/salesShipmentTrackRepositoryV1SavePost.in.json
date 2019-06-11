@@ -1,0 +1,77 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "entity": {
+                    "description": "Shipment track interface. A shipment is a delivery package that contains products. A shipment document accompanies the shipment. This document lists the products and their quantities in the delivery package. Merchants and customers can track shipments.",
+                    "properties": {
+                        "carrier_code": {
+                            "description": "Carrier code.",
+                            "type": "string"
+                        },
+                        "created_at": {
+                            "description": "Created-at timestamp.",
+                            "type": "string"
+                        },
+                        "description": {
+                            "description": "Description.",
+                            "type": "string"
+                        },
+                        "entity_id": {
+                            "description": "Shipment package ID.",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\ShipmentTrackInterface",
+                            "type": "object"
+                        },
+                        "order_id": {
+                            "description": "The order_id for the shipment package.",
+                            "type": "integer"
+                        },
+                        "parent_id": {
+                            "description": "Parent ID.",
+                            "type": "integer"
+                        },
+                        "qty": {
+                            "description": "Quantity.",
+                            "type": "number"
+                        },
+                        "title": {
+                            "description": "Title.",
+                            "type": "string"
+                        },
+                        "track_number": {
+                            "description": "Track number.",
+                            "type": "string"
+                        },
+                        "updated_at": {
+                            "description": "Updated-at timestamp.",
+                            "type": "string"
+                        },
+                        "weight": {
+                            "description": "Weight.",
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "order_id",
+                        "parent_id",
+                        "weight",
+                        "qty",
+                        "description",
+                        "track_number",
+                        "title",
+                        "carrier_code"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "entity"
+            ],
+            "type": "object"
+        }
+    }
+}

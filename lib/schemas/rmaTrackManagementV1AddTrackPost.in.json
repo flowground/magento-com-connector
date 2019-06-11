@@ -1,0 +1,54 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "track": {
+                    "description": "Interface TrackInterface",
+                    "properties": {
+                        "carrier_code": {
+                            "description": "Carrier code",
+                            "type": "string"
+                        },
+                        "carrier_title": {
+                            "description": "Carrier title",
+                            "type": "string"
+                        },
+                        "entity_id": {
+                            "description": "Entity id",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Rma\\Api\\Data\\TrackInterface",
+                            "type": "object"
+                        },
+                        "rma_entity_id": {
+                            "description": "Rma entity id",
+                            "type": "integer"
+                        },
+                        "track_number": {
+                            "description": "Track number",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "entity_id",
+                        "rma_entity_id",
+                        "track_number",
+                        "carrier_title",
+                        "carrier_code"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "track"
+            ],
+            "type": "object"
+        }
+    }
+}

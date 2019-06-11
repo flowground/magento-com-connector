@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "entity": {
+                    "description": "Invoice comment interface. An invoice is a record of the receipt of payment for an order. An invoice can include comments that detail the invoice history.",
+                    "properties": {
+                        "comment": {
+                            "description": "Comment.",
+                            "type": "string"
+                        },
+                        "created_at": {
+                            "description": "Created-at timestamp.",
+                            "type": "string"
+                        },
+                        "entity_id": {
+                            "description": "Invoice ID.",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\InvoiceCommentInterface",
+                            "type": "object"
+                        },
+                        "is_customer_notified": {
+                            "description": "Is-customer-notified flag value.",
+                            "type": "integer"
+                        },
+                        "is_visible_on_front": {
+                            "description": "Is-visible-on-storefront flag value.",
+                            "type": "integer"
+                        },
+                        "parent_id": {
+                            "description": "Parent ID.",
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "is_customer_notified",
+                        "parent_id",
+                        "comment",
+                        "is_visible_on_front"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "entity"
+            ],
+            "type": "object"
+        }
+    }
+}

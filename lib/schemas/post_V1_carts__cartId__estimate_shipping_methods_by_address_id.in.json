@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "cartId": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "addressId": {
+                    "description": "The estimate address id",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "addressId"
+            ],
+            "type": "object"
+        }
+    }
+}

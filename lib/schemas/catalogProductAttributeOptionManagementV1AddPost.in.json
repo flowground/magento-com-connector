@@ -1,0 +1,61 @@
+{
+    "type": "object",
+    "properties": {
+        "attributeCode": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "option": {
+                    "description": "Created from:",
+                    "properties": {
+                        "is_default": {
+                            "description": "Default",
+                            "type": "boolean"
+                        },
+                        "label": {
+                            "description": "Option label",
+                            "type": "string"
+                        },
+                        "sort_order": {
+                            "description": "Option order",
+                            "type": "integer"
+                        },
+                        "store_labels": {
+                            "description": "Option label for store scopes",
+                            "items": {
+                                "description": "Interface AttributeOptionLabelInterface",
+                                "properties": {
+                                    "label": {
+                                        "description": "Option label",
+                                        "type": "string"
+                                    },
+                                    "store_id": {
+                                        "description": "Store id",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "value": {
+                            "description": "Option value",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "label",
+                        "value"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "option"
+            ],
+            "type": "object"
+        }
+    }
+}

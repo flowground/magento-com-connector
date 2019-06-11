@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "registryId": {
+                    "description": "The estimate registry id",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "registryId"
+            ],
+            "type": "object"
+        }
+    }
+}

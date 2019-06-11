@@ -1,0 +1,96 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "category": {
+                    "description": "",
+                    "properties": {
+                        "available_sort_by": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "children": {
+                            "type": "string"
+                        },
+                        "created_at": {
+                            "type": "string"
+                        },
+                        "custom_attributes": {
+                            "description": "Custom attributes values.",
+                            "items": {
+                                "description": "Interface for custom attribute value.",
+                                "properties": {
+                                    "attribute_code": {
+                                        "description": "Attribute code",
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "description": "Attribute value",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "attribute_code",
+                                    "value"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Catalog\\Api\\Data\\CategoryInterface",
+                            "type": "object"
+                        },
+                        "id": {
+                            "type": "integer"
+                        },
+                        "include_in_menu": {
+                            "type": "boolean"
+                        },
+                        "is_active": {
+                            "description": "Whether category is active",
+                            "type": "boolean"
+                        },
+                        "level": {
+                            "description": "Category level",
+                            "type": "integer"
+                        },
+                        "name": {
+                            "description": "Category name",
+                            "type": "string"
+                        },
+                        "parent_id": {
+                            "description": "Parent category ID",
+                            "type": "integer"
+                        },
+                        "path": {
+                            "type": "string"
+                        },
+                        "position": {
+                            "description": "Category position",
+                            "type": "integer"
+                        },
+                        "updated_at": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "name"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "category"
+            ],
+            "type": "object"
+        }
+    }
+}

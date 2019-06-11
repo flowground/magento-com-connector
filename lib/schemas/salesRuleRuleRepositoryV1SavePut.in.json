@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "ruleId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "rule": {}
+            },
+            "required": [
+                "rule"
+            ],
+            "type": "object"
+        }
+    }
+}

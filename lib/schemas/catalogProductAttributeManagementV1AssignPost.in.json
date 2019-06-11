@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "attributeCode": {
+                    "type": "string"
+                },
+                "attributeGroupId": {
+                    "type": "integer"
+                },
+                "attributeSetId": {
+                    "type": "integer"
+                },
+                "sortOrder": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "attributeSetId",
+                "attributeGroupId",
+                "attributeCode",
+                "sortOrder"
+            ],
+            "type": "object"
+        }
+    }
+}

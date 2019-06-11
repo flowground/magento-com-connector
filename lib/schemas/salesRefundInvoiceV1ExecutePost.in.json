@@ -1,0 +1,100 @@
+{
+    "type": "object",
+    "properties": {
+        "invoiceId": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "appendComment": {
+                    "type": "boolean"
+                },
+                "arguments": {
+                    "description": "Interface CreditmemoCreationArgumentsInterface",
+                    "properties": {
+                        "adjustment_negative": {
+                            "description": "Credit memo negative adjustment.",
+                            "type": "number"
+                        },
+                        "adjustment_positive": {
+                            "description": "Credit memo positive adjustment.",
+                            "type": "number"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\CreditmemoCreationArgumentsInterface",
+                            "properties": {
+                                "return_to_stock_items": {
+                                    "items": {
+                                        "type": "integer"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "shipping_amount": {
+                            "description": "Credit memo shipping amount.",
+                            "type": "number"
+                        }
+                    },
+                    "type": "object"
+                },
+                "comment": {
+                    "description": "Interface CreditmemoCommentCreationInterface",
+                    "properties": {
+                        "comment": {
+                            "description": "Comment.",
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\CreditmemoCommentCreationInterface",
+                            "type": "object"
+                        },
+                        "is_visible_on_front": {
+                            "description": "Is-visible-on-storefront flag value.",
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "comment",
+                        "is_visible_on_front"
+                    ],
+                    "type": "object"
+                },
+                "isOnline": {
+                    "type": "boolean"
+                },
+                "items": {
+                    "items": {
+                        "description": "Interface CreditmemoItemCreationInterface",
+                        "properties": {
+                            "extension_attributes": {
+                                "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\CreditmemoItemCreationInterface",
+                                "type": "object"
+                            },
+                            "order_item_id": {
+                                "description": "Order item ID.",
+                                "type": "integer"
+                            },
+                            "qty": {
+                                "description": "Quantity.",
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "order_item_id",
+                            "qty"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "notify": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

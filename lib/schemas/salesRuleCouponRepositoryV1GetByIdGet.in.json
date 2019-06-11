@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "couponId": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

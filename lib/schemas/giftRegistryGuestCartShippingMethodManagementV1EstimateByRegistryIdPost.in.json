@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "cartId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "registryId": {
+                    "description": "The estimate registry id",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "registryId"
+            ],
+            "type": "object"
+        }
+    }
+}

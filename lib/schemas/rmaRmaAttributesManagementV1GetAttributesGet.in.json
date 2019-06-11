@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "formCode": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "giftCardCode": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

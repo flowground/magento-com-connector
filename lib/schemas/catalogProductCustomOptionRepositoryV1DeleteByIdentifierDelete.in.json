@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "optionId": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

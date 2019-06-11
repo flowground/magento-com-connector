@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "ruleId": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

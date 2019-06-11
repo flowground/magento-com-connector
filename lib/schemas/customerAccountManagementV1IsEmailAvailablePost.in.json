@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "customerEmail": {
+                    "type": "string"
+                },
+                "websiteId": {
+                    "description": "If not set, will use the current websiteId",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "customerEmail"
+            ],
+            "type": "object"
+        }
+    }
+}

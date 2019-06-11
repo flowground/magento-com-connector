@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "rateId": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

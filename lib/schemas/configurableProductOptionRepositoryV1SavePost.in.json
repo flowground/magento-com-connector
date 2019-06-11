@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "option": {
+                    "description": "Interface OptionInterface",
+                    "properties": {
+                        "attribute_id": {
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\ConfigurableProduct\\Api\\Data\\OptionInterface",
+                            "type": "object"
+                        },
+                        "id": {
+                            "type": "integer"
+                        },
+                        "is_use_default": {
+                            "type": "boolean"
+                        },
+                        "label": {
+                            "type": "string"
+                        },
+                        "position": {
+                            "type": "integer"
+                        },
+                        "product_id": {
+                            "type": "integer"
+                        },
+                        "values": {
+                            "items": {
+                                "description": "Interface OptionValueInterface",
+                                "properties": {
+                                    "extension_attributes": {
+                                        "description": "ExtensionInterface class for @see \\Magento\\ConfigurableProduct\\Api\\Data\\OptionValueInterface",
+                                        "type": "object"
+                                    },
+                                    "value_index": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "value_index"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "required": [
+                "option"
+            ],
+            "type": "object"
+        }
+    }
+}

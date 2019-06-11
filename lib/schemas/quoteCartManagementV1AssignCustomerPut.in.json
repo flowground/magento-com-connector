@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "cartId": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "customerId": {
+                    "description": "The customer ID.",
+                    "type": "integer"
+                },
+                "storeId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "customerId",
+                "storeId"
+            ],
+            "type": "object"
+        }
+    }
+}

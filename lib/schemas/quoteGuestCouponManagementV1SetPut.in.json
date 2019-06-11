@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "cartId": {
+            "required": true,
+            "type": "string"
+        },
+        "couponCode": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

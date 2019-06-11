@@ -1,0 +1,129 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "isGlobalScopeContent": {
+                    "type": "boolean"
+                },
+                "link": {
+                    "description": "",
+                    "properties": {
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Downloadable\\Api\\Data\\LinkInterface",
+                            "type": "object"
+                        },
+                        "id": {
+                            "description": "Sample(or link) id",
+                            "type": "integer"
+                        },
+                        "is_shareable": {
+                            "description": "Shareable status",
+                            "type": "integer"
+                        },
+                        "link_file": {
+                            "description": "relative file path",
+                            "type": "string"
+                        },
+                        "link_file_content": {
+                            "description": "",
+                            "properties": {
+                                "extension_attributes": {
+                                    "description": "ExtensionInterface class for @see \\Magento\\Downloadable\\Api\\Data\\File\\ContentInterface",
+                                    "type": "object"
+                                },
+                                "file_data": {
+                                    "description": "Data (base64 encoded content)",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "description": "File name",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "file_data",
+                                "name"
+                            ],
+                            "type": "object"
+                        },
+                        "link_type": {
+                            "type": "string"
+                        },
+                        "link_url": {
+                            "description": "Link url or null when type is 'file'",
+                            "type": "string"
+                        },
+                        "number_of_downloads": {
+                            "description": "Of downloads per user",
+                            "type": "integer"
+                        },
+                        "price": {
+                            "description": "Price",
+                            "type": "number"
+                        },
+                        "sample_file": {
+                            "description": "relative file path",
+                            "type": "string"
+                        },
+                        "sample_file_content": {
+                            "description": "",
+                            "properties": {
+                                "extension_attributes": {
+                                    "description": "ExtensionInterface class for @see \\Magento\\Downloadable\\Api\\Data\\File\\ContentInterface",
+                                    "type": "object"
+                                },
+                                "file_data": {
+                                    "description": "Data (base64 encoded content)",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "description": "File name",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "file_data",
+                                "name"
+                            ],
+                            "type": "object"
+                        },
+                        "sample_type": {
+                            "type": "string"
+                        },
+                        "sample_url": {
+                            "description": "file URL",
+                            "type": "string"
+                        },
+                        "sort_order": {
+                            "type": "integer"
+                        },
+                        "title": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "sort_order",
+                        "is_shareable",
+                        "price",
+                        "link_type",
+                        "sample_type"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "link"
+            ],
+            "type": "object"
+        }
+    }
+}

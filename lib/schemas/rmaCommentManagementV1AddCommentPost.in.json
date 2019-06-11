@@ -1,0 +1,91 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "data": {
+                    "description": "Interface CommentInterface",
+                    "properties": {
+                        "admin": {
+                            "description": "Is_admin",
+                            "type": "boolean"
+                        },
+                        "comment": {
+                            "description": "Comment",
+                            "type": "string"
+                        },
+                        "created_at": {
+                            "description": "Created_at",
+                            "type": "string"
+                        },
+                        "custom_attributes": {
+                            "description": "Custom attributes values.",
+                            "items": {
+                                "description": "Interface for custom attribute value.",
+                                "properties": {
+                                    "attribute_code": {
+                                        "description": "Attribute code",
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "description": "Attribute value",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "attribute_code",
+                                    "value"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "customer_notified": {
+                            "description": "Is_customer_notified",
+                            "type": "boolean"
+                        },
+                        "entity_id": {
+                            "description": "Entity_id",
+                            "type": "integer"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Rma\\Api\\Data\\CommentInterface",
+                            "type": "object"
+                        },
+                        "rma_entity_id": {
+                            "description": "Rma Id",
+                            "type": "integer"
+                        },
+                        "status": {
+                            "description": "Status",
+                            "type": "string"
+                        },
+                        "visible_on_front": {
+                            "description": "Is_visible_on_front",
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "comment",
+                        "rma_entity_id",
+                        "created_at",
+                        "entity_id",
+                        "customer_notified",
+                        "visible_on_front",
+                        "status",
+                        "admin"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data"
+            ],
+            "type": "object"
+        }
+    }
+}

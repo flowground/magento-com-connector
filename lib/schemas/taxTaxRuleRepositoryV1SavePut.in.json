@@ -1,0 +1,72 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "rule": {
+                    "description": "Tax rule interface.",
+                    "properties": {
+                        "calculate_subtotal": {
+                            "description": "Calculate subtotal.",
+                            "type": "boolean"
+                        },
+                        "code": {
+                            "description": "Tax rule code",
+                            "type": "string"
+                        },
+                        "customer_tax_class_ids": {
+                            "description": "Customer tax class id",
+                            "items": {
+                                "type": "integer"
+                            },
+                            "type": "array"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Tax\\Api\\Data\\TaxRuleInterface",
+                            "type": "object"
+                        },
+                        "id": {
+                            "description": "Id",
+                            "type": "integer"
+                        },
+                        "position": {
+                            "description": "Sort order.",
+                            "type": "integer"
+                        },
+                        "priority": {
+                            "description": "Priority",
+                            "type": "integer"
+                        },
+                        "product_tax_class_ids": {
+                            "description": "Product tax class id",
+                            "items": {
+                                "type": "integer"
+                            },
+                            "type": "array"
+                        },
+                        "tax_rate_ids": {
+                            "description": "Tax rate ids",
+                            "items": {
+                                "type": "integer"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "code",
+                        "priority",
+                        "position",
+                        "customer_tax_class_ids",
+                        "product_tax_class_ids",
+                        "tax_rate_ids"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "rule"
+            ],
+            "type": "object"
+        }
+    }
+}

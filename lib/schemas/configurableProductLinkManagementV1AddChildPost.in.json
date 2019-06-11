@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "childSku": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "childSku"
+            ],
+            "type": "object"
+        }
+    }
+}

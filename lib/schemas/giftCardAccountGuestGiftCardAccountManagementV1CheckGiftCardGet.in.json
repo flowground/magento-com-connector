@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "cartId": {
+            "required": true,
+            "type": "string"
+        },
+        "giftCardCode": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

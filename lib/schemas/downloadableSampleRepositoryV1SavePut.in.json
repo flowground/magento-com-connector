@@ -1,0 +1,84 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "isGlobalScopeContent": {
+                    "type": "boolean"
+                },
+                "sample": {
+                    "description": "",
+                    "properties": {
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Downloadable\\Api\\Data\\SampleInterface",
+                            "type": "object"
+                        },
+                        "id": {
+                            "description": "Sample(or link) id",
+                            "type": "integer"
+                        },
+                        "sample_file": {
+                            "description": "relative file path",
+                            "type": "string"
+                        },
+                        "sample_file_content": {
+                            "description": "",
+                            "properties": {
+                                "extension_attributes": {
+                                    "description": "ExtensionInterface class for @see \\Magento\\Downloadable\\Api\\Data\\File\\ContentInterface",
+                                    "type": "object"
+                                },
+                                "file_data": {
+                                    "description": "Data (base64 encoded content)",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "description": "File name",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "file_data",
+                                "name"
+                            ],
+                            "type": "object"
+                        },
+                        "sample_type": {
+                            "type": "string"
+                        },
+                        "sample_url": {
+                            "description": "file URL",
+                            "type": "string"
+                        },
+                        "sort_order": {
+                            "description": "Order index for sample",
+                            "type": "integer"
+                        },
+                        "title": {
+                            "description": "Title",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "title",
+                        "sort_order",
+                        "sample_type"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "sample"
+            ],
+            "type": "object"
+        }
+    }
+}

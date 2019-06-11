@@ -1,0 +1,279 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "customer": {
+                    "description": "Customer interface.",
+                    "properties": {
+                        "addresses": {
+                            "description": "Customer addresses.",
+                            "items": {
+                                "description": "Customer address interface.",
+                                "properties": {
+                                    "city": {
+                                        "description": "City name",
+                                        "type": "string"
+                                    },
+                                    "company": {
+                                        "description": "Company",
+                                        "type": "string"
+                                    },
+                                    "country_id": {
+                                        "description": "Country code in ISO_3166-2 format",
+                                        "type": "string"
+                                    },
+                                    "custom_attributes": {
+                                        "description": "Custom attributes values.",
+                                        "items": {
+                                            "description": "Interface for custom attribute value.",
+                                            "properties": {
+                                                "attribute_code": {
+                                                    "description": "Attribute code",
+                                                    "type": "string"
+                                                },
+                                                "value": {
+                                                    "description": "Attribute value",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "attribute_code",
+                                                "value"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "type": "array"
+                                    },
+                                    "customer_id": {
+                                        "description": "Customer ID",
+                                        "type": "integer"
+                                    },
+                                    "default_billing": {
+                                        "description": "If this address is default billing address",
+                                        "type": "boolean"
+                                    },
+                                    "default_shipping": {
+                                        "description": "If this address is default shipping address.",
+                                        "type": "boolean"
+                                    },
+                                    "extension_attributes": {
+                                        "description": "ExtensionInterface class for @see \\Magento\\Customer\\Api\\Data\\AddressInterface",
+                                        "type": "object"
+                                    },
+                                    "fax": {
+                                        "description": "Fax number",
+                                        "type": "string"
+                                    },
+                                    "firstname": {
+                                        "description": "First name",
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "description": "ID",
+                                        "type": "integer"
+                                    },
+                                    "lastname": {
+                                        "description": "Last name",
+                                        "type": "string"
+                                    },
+                                    "middlename": {
+                                        "description": "Middle name",
+                                        "type": "string"
+                                    },
+                                    "postcode": {
+                                        "description": "Postcode",
+                                        "type": "string"
+                                    },
+                                    "prefix": {
+                                        "description": "Prefix",
+                                        "type": "string"
+                                    },
+                                    "region": {
+                                        "description": "Customer address region interface.",
+                                        "properties": {
+                                            "extension_attributes": {
+                                                "description": "ExtensionInterface class for @see \\Magento\\Customer\\Api\\Data\\RegionInterface",
+                                                "type": "object"
+                                            },
+                                            "region": {
+                                                "description": "Region",
+                                                "type": "string"
+                                            },
+                                            "region_code": {
+                                                "description": "Region code",
+                                                "type": "string"
+                                            },
+                                            "region_id": {
+                                                "description": "Region id",
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "region_code",
+                                            "region",
+                                            "region_id"
+                                        ],
+                                        "type": "object"
+                                    },
+                                    "region_id": {
+                                        "description": "Region ID",
+                                        "type": "integer"
+                                    },
+                                    "street": {
+                                        "description": "Street",
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    },
+                                    "suffix": {
+                                        "description": "Suffix",
+                                        "type": "string"
+                                    },
+                                    "telephone": {
+                                        "description": "Telephone number",
+                                        "type": "string"
+                                    },
+                                    "vat_id": {
+                                        "description": "Vat id",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "confirmation": {
+                            "description": "Confirmation",
+                            "type": "string"
+                        },
+                        "created_at": {
+                            "description": "Created at time",
+                            "type": "string"
+                        },
+                        "created_in": {
+                            "description": "Created in area",
+                            "type": "string"
+                        },
+                        "custom_attributes": {
+                            "description": "Custom attributes values.",
+                            "items": {
+                                "description": "Interface for custom attribute value.",
+                                "properties": {
+                                    "attribute_code": {
+                                        "description": "Attribute code",
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "description": "Attribute value",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "attribute_code",
+                                    "value"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "default_billing": {
+                            "description": "Default billing address id",
+                            "type": "string"
+                        },
+                        "default_shipping": {
+                            "description": "Default shipping address id",
+                            "type": "string"
+                        },
+                        "disable_auto_group_change": {
+                            "description": "Disable auto group change flag.",
+                            "type": "integer"
+                        },
+                        "dob": {
+                            "description": "Date of birth",
+                            "type": "string"
+                        },
+                        "email": {
+                            "description": "Email address",
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Customer\\Api\\Data\\CustomerInterface",
+                            "properties": {
+                                "is_subscribed": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "firstname": {
+                            "description": "First name",
+                            "type": "string"
+                        },
+                        "gender": {
+                            "description": "Gender",
+                            "type": "integer"
+                        },
+                        "group_id": {
+                            "description": "Group id",
+                            "type": "integer"
+                        },
+                        "id": {
+                            "description": "Customer id",
+                            "type": "integer"
+                        },
+                        "lastname": {
+                            "description": "Last name",
+                            "type": "string"
+                        },
+                        "middlename": {
+                            "description": "Middle name",
+                            "type": "string"
+                        },
+                        "prefix": {
+                            "description": "Prefix",
+                            "type": "string"
+                        },
+                        "store_id": {
+                            "description": "Store id",
+                            "type": "integer"
+                        },
+                        "suffix": {
+                            "description": "Suffix",
+                            "type": "string"
+                        },
+                        "taxvat": {
+                            "description": "Tax Vat",
+                            "type": "string"
+                        },
+                        "updated_at": {
+                            "description": "Updated at time",
+                            "type": "string"
+                        },
+                        "website_id": {
+                            "description": "Website id",
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "email",
+                        "firstname",
+                        "lastname"
+                    ],
+                    "type": "object"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "redirectUrl": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "customer"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "taxRate": {
+                    "description": "Tax rate interface.",
+                    "properties": {
+                        "code": {
+                            "description": "Tax rate code",
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Tax\\Api\\Data\\TaxRateInterface",
+                            "type": "object"
+                        },
+                        "id": {
+                            "description": "Id",
+                            "type": "integer"
+                        },
+                        "rate": {
+                            "description": "Tax rate in percentage",
+                            "type": "number"
+                        },
+                        "region_name": {
+                            "description": "Region name",
+                            "type": "string"
+                        },
+                        "tax_country_id": {
+                            "description": "Country id",
+                            "type": "string"
+                        },
+                        "tax_postcode": {
+                            "description": "Postcode",
+                            "type": "string"
+                        },
+                        "tax_region_id": {
+                            "description": "Region id",
+                            "type": "integer"
+                        },
+                        "titles": {
+                            "description": "Tax rate titles",
+                            "items": {
+                                "description": "Tax rate title interface.",
+                                "properties": {
+                                    "extension_attributes": {
+                                        "description": "ExtensionInterface class for @see \\Magento\\Tax\\Api\\Data\\TaxRateTitleInterface",
+                                        "type": "object"
+                                    },
+                                    "store_id": {
+                                        "description": "Store id",
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "description": "Title value",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "store_id",
+                                    "value"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "zip_from": {
+                            "description": "Zip range from",
+                            "type": "integer"
+                        },
+                        "zip_is_range": {
+                            "description": "Zip is range",
+                            "type": "integer"
+                        },
+                        "zip_to": {
+                            "description": "Zip range to",
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "tax_country_id",
+                        "rate",
+                        "code"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "taxRate"
+            ],
+            "type": "object"
+        }
+    }
+}

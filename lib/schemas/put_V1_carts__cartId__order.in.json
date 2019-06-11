@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "cartId": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "paymentMethod": {
+                    "description": "Interface PaymentInterface",
+                    "properties": {
+                        "additional_data": {
+                            "description": "Payment additional details",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Quote\\Api\\Data\\PaymentInterface",
+                            "properties": {
+                                "agreement_ids": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "method": {
+                            "description": "Payment method code",
+                            "type": "string"
+                        },
+                        "po_number": {
+                            "description": "Purchase order number",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "method"
+                    ],
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

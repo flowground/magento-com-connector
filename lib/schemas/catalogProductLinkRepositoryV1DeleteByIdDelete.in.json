@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "type": {
+            "required": true,
+            "type": "string"
+        },
+        "linkedProductSku": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "items": {
+                    "items": {
+                        "description": "",
+                        "properties": {
+                            "extension_attributes": {
+                                "description": "ExtensionInterface class for @see \\Magento\\Catalog\\Api\\Data\\ProductLinkInterface",
+                                "properties": {
+                                    "qty": {
+                                        "type": "number"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "link_type": {
+                                "description": "Link type",
+                                "type": "string"
+                            },
+                            "linked_product_sku": {
+                                "description": "Linked product sku",
+                                "type": "string"
+                            },
+                            "linked_product_type": {
+                                "description": "Linked product type (simple, virtual, etc)",
+                                "type": "string"
+                            },
+                            "position": {
+                                "description": "Linked item position",
+                                "type": "integer"
+                            },
+                            "sku": {
+                                "description": "SKU",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "sku",
+                            "link_type",
+                            "linked_product_sku",
+                            "linked_product_type",
+                            "position"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "items"
+            ],
+            "type": "object"
+        }
+    }
+}

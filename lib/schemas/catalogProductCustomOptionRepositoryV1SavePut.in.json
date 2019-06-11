@@ -1,0 +1,121 @@
+{
+    "type": "object",
+    "properties": {
+        "optionId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "option": {
+                    "description": "",
+                    "properties": {
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Catalog\\Api\\Data\\ProductCustomOptionInterface",
+                            "type": "object"
+                        },
+                        "file_extension": {
+                            "type": "string"
+                        },
+                        "image_size_x": {
+                            "type": "integer"
+                        },
+                        "image_size_y": {
+                            "type": "integer"
+                        },
+                        "is_require": {
+                            "description": "Is require",
+                            "type": "boolean"
+                        },
+                        "max_characters": {
+                            "type": "integer"
+                        },
+                        "option_id": {
+                            "description": "Option id",
+                            "type": "integer"
+                        },
+                        "price": {
+                            "description": "Price",
+                            "type": "number"
+                        },
+                        "price_type": {
+                            "description": "Price type",
+                            "type": "string"
+                        },
+                        "product_sku": {
+                            "description": "Product SKU",
+                            "type": "string"
+                        },
+                        "sku": {
+                            "description": "Sku",
+                            "type": "string"
+                        },
+                        "sort_order": {
+                            "description": "Sort order",
+                            "type": "integer"
+                        },
+                        "title": {
+                            "description": "Option title",
+                            "type": "string"
+                        },
+                        "type": {
+                            "description": "Option type",
+                            "type": "string"
+                        },
+                        "values": {
+                            "items": {
+                                "description": "",
+                                "properties": {
+                                    "option_type_id": {
+                                        "description": "Option type id",
+                                        "type": "integer"
+                                    },
+                                    "price": {
+                                        "description": "Price",
+                                        "type": "number"
+                                    },
+                                    "price_type": {
+                                        "description": "Price type",
+                                        "type": "string"
+                                    },
+                                    "sku": {
+                                        "description": "Sku",
+                                        "type": "string"
+                                    },
+                                    "sort_order": {
+                                        "description": "Sort order",
+                                        "type": "integer"
+                                    },
+                                    "title": {
+                                        "description": "Option title",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "title",
+                                    "sort_order",
+                                    "price",
+                                    "price_type"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "product_sku",
+                        "title",
+                        "type",
+                        "sort_order",
+                        "is_require"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "option"
+            ],
+            "type": "object"
+        }
+    }
+}

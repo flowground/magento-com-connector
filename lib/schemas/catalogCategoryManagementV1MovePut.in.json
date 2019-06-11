@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "categoryId": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "afterId": {
+                    "type": "integer"
+                },
+                "parentId": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "parentId"
+            ],
+            "type": "object"
+        }
+    }
+}

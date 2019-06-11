@@ -1,0 +1,120 @@
+{
+    "type": "object",
+    "properties": {
+        "orderId": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "appendComment": {
+                    "type": "boolean"
+                },
+                "arguments": {
+                    "description": "Interface for creation arguments for Shipment.",
+                    "properties": {
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\ShipmentCreationArgumentsInterface",
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "comment": {
+                    "description": "Interface ShipmentCommentCreationInterface",
+                    "properties": {
+                        "comment": {
+                            "description": "Comment.",
+                            "type": "string"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\ShipmentCommentCreationInterface",
+                            "type": "object"
+                        },
+                        "is_visible_on_front": {
+                            "description": "Is-visible-on-storefront flag value.",
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "comment",
+                        "is_visible_on_front"
+                    ],
+                    "type": "object"
+                },
+                "items": {
+                    "items": {
+                        "description": "Input argument for shipment item creation Interface ShipmentItemCreationInterface",
+                        "properties": {
+                            "extension_attributes": {
+                                "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\ShipmentItemCreationInterface",
+                                "type": "object"
+                            },
+                            "order_item_id": {
+                                "description": "Order item ID.",
+                                "type": "integer"
+                            },
+                            "qty": {
+                                "description": "Quantity.",
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "order_item_id",
+                            "qty"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "notify": {
+                    "type": "boolean"
+                },
+                "packages": {
+                    "items": {
+                        "description": "Shipment package interface. A shipment is a delivery package that contains products. A shipment document accompanies the shipment. This document lists the products and their quantities in the delivery package.",
+                        "properties": {
+                            "extension_attributes": {
+                                "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\ShipmentPackageCreationInterface",
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "tracks": {
+                    "items": {
+                        "description": "Shipment Track Creation interface.",
+                        "properties": {
+                            "carrier_code": {
+                                "description": "Carrier code.",
+                                "type": "string"
+                            },
+                            "extension_attributes": {
+                                "description": "ExtensionInterface class for @see \\Magento\\Sales\\Api\\Data\\ShipmentTrackCreationInterface",
+                                "type": "object"
+                            },
+                            "title": {
+                                "description": "Title.",
+                                "type": "string"
+                            },
+                            "track_number": {
+                                "description": "Track number.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "track_number",
+                            "title",
+                            "carrier_code"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

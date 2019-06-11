@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "pageId": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

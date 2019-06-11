@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "editMode": {
+            "required": false,
+            "type": "boolean"
+        },
+        "storeId": {
+            "required": false,
+            "type": "integer"
+        },
+        "forceReload": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

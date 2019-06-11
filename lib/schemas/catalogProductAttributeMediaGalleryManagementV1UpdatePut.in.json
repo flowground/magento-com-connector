@@ -1,0 +1,132 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "entryId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "entry": {
+                    "description": "",
+                    "properties": {
+                        "content": {
+                            "description": "Image Content data interface",
+                            "properties": {
+                                "base64_encoded_data": {
+                                    "description": "Media data (base64 encoded content)",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "description": "Image name",
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "description": "MIME type",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "base64_encoded_data",
+                                "type",
+                                "name"
+                            ],
+                            "type": "object"
+                        },
+                        "disabled": {
+                            "description": "If gallery entry is hidden from product page",
+                            "type": "boolean"
+                        },
+                        "extension_attributes": {
+                            "description": "ExtensionInterface class for @see \\Magento\\Catalog\\Api\\Data\\ProductAttributeMediaGalleryEntryInterface",
+                            "properties": {
+                                "video_content": {
+                                    "description": "Video Content data interface",
+                                    "properties": {
+                                        "media_type": {
+                                            "description": "MIME type",
+                                            "type": "string"
+                                        },
+                                        "video_description": {
+                                            "description": "Video Description",
+                                            "type": "string"
+                                        },
+                                        "video_metadata": {
+                                            "description": "Metadata",
+                                            "type": "string"
+                                        },
+                                        "video_provider": {
+                                            "description": "Provider",
+                                            "type": "string"
+                                        },
+                                        "video_title": {
+                                            "description": "Title",
+                                            "type": "string"
+                                        },
+                                        "video_url": {
+                                            "description": "Video URL",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "media_type",
+                                        "video_provider",
+                                        "video_url",
+                                        "video_title",
+                                        "video_description",
+                                        "video_metadata"
+                                    ],
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "file": {
+                            "description": "File path",
+                            "type": "string"
+                        },
+                        "id": {
+                            "description": "Gallery entry ID",
+                            "type": "integer"
+                        },
+                        "label": {
+                            "description": "Gallery entry alternative text",
+                            "type": "string"
+                        },
+                        "media_type": {
+                            "description": "Media type",
+                            "type": "string"
+                        },
+                        "position": {
+                            "description": "Gallery entry position (sort order)",
+                            "type": "integer"
+                        },
+                        "types": {
+                            "description": "Gallery entry image types (thumbnail, image, small_image etc)",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "media_type",
+                        "label",
+                        "position",
+                        "disabled",
+                        "types"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "entry"
+            ],
+            "type": "object"
+        }
+    }
+}

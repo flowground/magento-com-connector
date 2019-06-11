@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "addressId": {
+                    "description": "The estimate address id",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "addressId"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "customerGroupId": {
+            "required": true,
+            "type": "string"
+        },
+        "price": {
+            "required": true,
+            "type": "number"
+        },
+        "qty": {
+            "required": true,
+            "type": "number"
+        }
+    }
+}

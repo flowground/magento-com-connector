@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "storeCodes": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

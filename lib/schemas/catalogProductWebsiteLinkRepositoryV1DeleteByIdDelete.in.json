@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "type": "string"
+        },
+        "websiteId": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

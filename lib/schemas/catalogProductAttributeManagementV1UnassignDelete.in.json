@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "attributeSetId": {
+            "required": true,
+            "type": "string"
+        },
+        "attributeCode": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
